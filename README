@@ -3,4 +3,5 @@ in command line run
 php script.php variable1,variable2,variable3
 
 This will create the fillable array, as well as the rules, and saver function for a Laravel Model. 
+
 Then you can go through and customize the saver function for your own specific needs.
