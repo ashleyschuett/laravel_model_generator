@@ -12,7 +12,7 @@ foreach($args as $arg){
 	$content = $content .  "'". $arg ."',";
 }
 	
-$content = $content . "] \n 
+$content = $content . "]; \n 
 public static function rules(){ \n 
 	return array(\n";
 
@@ -20,17 +20,17 @@ foreach ($args as $arg){
 	$content = $content . "\t\t\t'".$arg."' => 'required',\n";
 }
 
-$content = $content . "\t)\n
+$content = $content . "\t);\n
 } \n
 public static function saver(){ \n
 	return array(\n";
 
 
 foreach ($args as $arg){
-	$content = $content . "\t\t\t'".$arg."' => Input::get('".$arg."')\n";
+	$content = $content . "\t\t\t'".$arg."' => Input::get('".$arg."'),\n";
 }
 
-$content = $content . "\t)\n
+$content = $content . "\t);\n
 }\n
 ?>";
 
